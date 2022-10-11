@@ -9,11 +9,23 @@
     <title>Mail Dadi</title>
 </head>
 <body>
-    <label for="email">Inserisci la tua email: </label>
+    <div class="email">
+        <label for="email">Inserisci la tua email: </label>
     <input type="email" name="inputEmail" id="inputEmail">
     <button onclick="send()">Controlla</button>
 
     <div id="risposta"></div>
+    </div>
+
+
+    <div class="dadi mt-5">
+        <button id="btnDadi" onclick="lanciaDadi()">Lancia i Dadi</button>
+        <h2>Il tuo punto</h2>
+        <div class="dadiUtente"></div>
+        <h2>Punto del computer</h2>
+        <div class="dadiComputer"></div>
+    </div>
+    
 
     <script src="js/script.js"></script>
 </body>
