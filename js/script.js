@@ -6,31 +6,38 @@
 // stampa un messaggio appropriato sull’esito del controllo.
 
 
-const inputEmail = document.getElementById('inputEmail');
-console.log(inputEmail);
-let valore = inputEmail.value;
-console.log(valore);
-
-// Inserisco ARRAY con lista invitati
-
-const listaInvitati = ['mattia@gmail.com', 'giovanni@gmail.com', 'giulia@gmail.com', 'valeria@gmail.com']
-console.log(listaInvitati);
 
 
-for( let i = 0; i < listaInvitati.length; i++){
-    console.log(listaInvitati[i]);
-    let email = listaInvitati[i];
-    let invitato = false;
-    
-    if(valore == email){
-        // invitato = true;
-        console.log('Sei stato invitato');
-    } else{
-        console.log('Non sei stato invitato');
-    }
-}
+ function send() {
 
+            const inputEmail = document.getElementById('inputEmail');
+            //console.log(inputEmail);
+            let valore = inputEmail.value;
+            //console.log(valore);
 
+            let risposta = document.getElementById('risposta');
+            
+            // Inserisco ARRAY con lista invitati
+            
+            const listaInvitati = ['mattia@gmail.com', 'giovanni@gmail.com', 'giulia@gmail.com', 'valeria@gmail.com']
+            console.log(listaInvitati);
+            
+            for( let i = 0; i < listaInvitati.length; i++){
+                // console.log(listaInvitati[i]);
+                let email = listaInvitati[i];
+                
+                if(valore == email){
+                    console.log('Sei stato invitato');
+                    risposta.innerHTML = 'Sei stato invitato';
+            
+                } else{
+                    console.log('Non sei stato invitato');
+                    risposta.innerHTML = 'Non sei stato invitato';
+                }
+                
+            }
+          }
+        
 
 
 
