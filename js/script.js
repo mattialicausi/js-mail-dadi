@@ -74,10 +74,10 @@
 
             const numeroDaGenerare = 1;
 
-                let numeroGeneratoUtente = Math.floor(Math.random() * 7);
+                let numeroGeneratoUtente = Math.floor((Math.random() * 6 + 1));
                 console.log(numeroGeneratoUtente);
 
-                let numeroGeneratoComputer = Math.floor(Math.random() * 7);
+                let numeroGeneratoComputer = Math.floor((Math.random() * 6) + 1);
                 console.log(numeroGeneratoComputer);
 
                 const dadiUtente = document.getElementById('dadiUtente');

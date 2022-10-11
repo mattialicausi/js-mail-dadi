@@ -9,30 +9,38 @@
     <title>Mail Dadi</title>
 </head>
 <body>
-    <div class="email">
-        <label for="email">Inserisci la tua email: </label>
-    <input type="email" name="inputEmail" id="inputEmail">
-    <button onclick="send()">Controlla</button>
+    <div class="mycontainer mt-5">
+        <h1 class="text-center">Mail e Dadi</h1>
 
-    <div id="risposta"></div>
-    </div>
+         <div class="email">
+        <label for="email">Inserisci la tua email: </label><br>
+        <input type="email" name="inputEmail" id="inputEmail">
+        <button onclick="send()">Controlla</button>
 
+         <div id="risposta"></div>
+         </div>
 
-    <div class="dadi mt-5">
-        <button id="btnDadi" onclick="lanciaDadi()">Lancia i Dadi</button>
-        <h2>Il tuo punto</h2>
-        <div id="dadiUtente">
-            
+         <div class="row">
+
+             <div class="dadi mt-5">
+            <button id="btnDadi" onclick="lanciaDadi()">Lancia i Dadi</button>
+            <h2>Il tuo punto</h2>
+            <div id="dadiUtente">
+                
+            </div>
+
+            <h2>Punto del computer</h2>
+            <div id="dadiComputer">
+
+            </div>
+            <div class="fs-3 text-center" id="risultatoDadi">
+
+            </div>
         </div>
-
-        <h2>Punto del computer</h2>
-        <div id="dadiComputer">
-
+         </div>
+       
         </div>
-        <div id="risultatoDadi">
-            
-        </div>
-    </div>
+  
     
 
     <script src="js/script.js"></script>
