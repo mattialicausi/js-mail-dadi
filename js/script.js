@@ -21,20 +21,30 @@
             
             const listaInvitati = ['mattia@gmail.com', 'giovanni@gmail.com', 'giulia@gmail.com', 'valeria@gmail.com']
             console.log(listaInvitati);
-            
+
+            let trovato = false;
+
             for( let i = 0; i < listaInvitati.length; i++){
                 // console.log(listaInvitati[i]);
                 let email = listaInvitati[i];
                 
                 if(valore == email){
                     console.log('Sei stato invitato');
-                    risposta.innerHTML = ('Sei stato invitato');
-            
+                   
+                    trovato = true;
+                    
                 } else{
                     console.log('Non sei stato invitato');
-                    risposta.innerHTML = ('Non sei stato invitato');
+                   
                 }
             }
+
+            if(trovato == true){
+                risposta.innerHTML = 'Sei stato invitato';
+            } else{
+                risposta.innerHTML = ('Non sei stato invitato');
+            }
+
           }
 
 
@@ -59,9 +69,8 @@
 
             const numeroUtente = [];
             const numeroComputer = [];
-
-            const dadiUtente = document.getElementById('dadiUtente');
-            const dadiComputer = document.getElementById('dadiComputer');
+            let risultatoDadi = document.getElementById('risultatoDadi');
+           
 
             const numeroDaGenerare = 1;
 
@@ -71,20 +80,23 @@
                 let numeroGeneratoComputer = Math.floor(Math.random() * 7);
                 console.log(numeroGeneratoComputer);
 
-
-
+                const dadiUtente = document.getElementById('dadiUtente');
+                const dadiComputer = document.getElementById('dadiComputer');
+                    dadiUtente.innerHTML = numeroGeneratoUtente;
+                    dadiComputer.innerHTML = numeroGeneratoComputer;
 
                 if (numeroGeneratoUtente > numeroGeneratoComputer){
                     console.log('Ha vinto l utente');
-                    dadiComputer.append = numeroGeneratoUtente;
-                    dadiComputer.append = numeroGeneratoComputer;
+                    risultatoDadi.innerHTML = 'Hai vinto!!';
+
                 } else if (numeroGeneratoUtente == numeroGeneratoComputer){
                     console.log('Pareggio');
+                    risultatoDadi.innerHTML = 'Hai pareggiato';
+
                 } else{
                     console.log('Ha vinto il computer');
+                    risultatoDadi.innerHTML = 'Hai perso';
                 }
-           
-
 
         }
 
